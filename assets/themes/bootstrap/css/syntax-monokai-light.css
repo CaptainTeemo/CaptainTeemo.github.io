@@ -8,7 +8,6 @@
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
-  font-size: 1.2em;
 }
 .highlight pre {
   padding: 0;
@@ -17,6 +16,7 @@
   white-space: pre-wrap;
   background-color: transparent;
   border: 0;
+  font-size: 1.5em;
 }
 .highlight pre code {
   font-size: inherit;
