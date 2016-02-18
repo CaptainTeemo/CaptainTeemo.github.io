@@ -11,7 +11,7 @@ excerpt_separator: "<!--more-->"
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : Jekyll Bootstrap3
+title : Home
 tagline: Site Tagline
 author :
   name : Jekyll Bootstrap3
