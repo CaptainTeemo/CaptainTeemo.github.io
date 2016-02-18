@@ -2,14 +2,14 @@
  * Syntax coloring through Monokai CSS Theme for pygments
  * */
 
-/*.highlight {
+.highlight {
   padding: 9px 14px;
   margin-bottom: 14px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
   font-size: 1.2em;
-}*/
+}
 /*.highlight pre {
   padding: 0;
   margin-top: 0;
