@@ -13,7 +13,7 @@ padding: 0.2em 0.9em;
 	font: normal normal normal 115%/normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
   line-height: 1.1em;
   overflow: auto;
-	font-size: 1.5em;
+	font-size: 1.0em;
 	border: 1px solid #CCC;
 	
 	-moz-border-radius:7px;
@@ -32,7 +32,7 @@ color: #C7254E; /*C5CBD0*/
 /*color: white*/
 background-image: url(/images/opaque_20.png);
 font-family: Menlo, Consolas, "Courier New", Courier, "Liberation Mono", monospace;
-font-size: 1.6em;
+font-size: 1.5em;
 /*height: 0px;
 image-rendering: auto;
 left: auto;
