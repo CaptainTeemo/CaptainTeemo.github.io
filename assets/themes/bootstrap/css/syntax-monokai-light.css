@@ -1,10 +1,7 @@
 /*
  * Syntax coloring through Monokai CSS Theme for pygments
  * */
-
-.highlight .hll { background-color: #49483e }
-.highlight, .highlight pre  { background: #FAFAFA; border: none; }
-
+/*
 .highlight {
   padding: 9px 14px;
   margin-bottom: 14px;
@@ -22,7 +19,7 @@
 }
 .highlight pre code {
   font-size: inherit;
-  color: #333; /* Effectively the base text color */
+  color: #333;
 }
 .highlight pre .lineno {
   display: inline-block;
@@ -31,7 +28,7 @@
   margin-right: 10px;
   color: #bebec5;
   text-align: right;
-}
+}*/
 
 /*.highlight  { background-color: #49483e }*/
 .highlight .hll { background-color: #49483e }
