@@ -11,6 +11,7 @@ iOS privides two primary paths for creating high-quality graphics in your system
 The `UIView` and its subclasses use `drawRect:` method to draw. When a view becomes visible for the first time or a portion of the view needs to be redrawn, `UIKit` will call `drawRect:` automatically, passes a rectangle as parameter which contains view's entire visible area. During subsequent calls the rectangle include only the portion of the view that actually needs to be redrawn.
 
 The following actions can also trigger a view update:
+
 - Moving or removing another view that was partially obscuring a view
 
 - Making a previously hidden view visible again by setting its hidden property to false
