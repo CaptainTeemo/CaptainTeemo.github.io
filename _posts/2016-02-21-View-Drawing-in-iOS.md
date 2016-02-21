@@ -20,7 +20,7 @@ The following actions can also trigger a view update:
 
 - Explicitly calling the setNeedsDisplay or setNeedsDisplayInRect: method of you view
 
-After call `drawRect:` method, the view marks itself as updated and waits for new actions to arrive and trigger another update cycle.
+After calling `drawRect:` method, the view marks itself as updated and waits for new actions to arrive and trigger another update cycle.
 
 ##### Note:
 - *For maximum performance, you should redraw only affected content.*
