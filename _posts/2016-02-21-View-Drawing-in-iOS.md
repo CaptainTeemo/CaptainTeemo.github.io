@@ -40,6 +40,9 @@ class CircleView: UIView {
 let view = CircleView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 ```
 
+The code above runs like:
+
+![alt tag](https://raw.github.com/CaptainTeemo/CaptainTeemo.github.io/master/assets/images/CircleView.png)
 
 
 
