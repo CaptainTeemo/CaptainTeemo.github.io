@@ -12,8 +12,11 @@ The `UIView` and its subclasses use `drawRect:` method to draw. When a view beco
 
 The following actions can also trigger a view update:
 - Moving or removing another view that was partially obscuring a view
+
 - Making a previously hidden view visible again by setting its hidden property to false
+
 - Scrolling a view off of the screen and then back onto the screen
+
 - Explicitly calling the setNeedsDisplay or setNeedsDisplayInRect: method of you view
 
 After call `drawRect:` method, the view marks itself as updated and waits for new actions to arrive and trigger another update cycle.
