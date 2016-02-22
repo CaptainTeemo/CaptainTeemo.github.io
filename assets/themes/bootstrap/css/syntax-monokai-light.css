@@ -22,6 +22,7 @@
   overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   word-wrap: normal;
+  width: 500px;
 }
 
 .highlight pre code {
