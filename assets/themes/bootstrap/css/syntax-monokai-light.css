@@ -18,6 +18,7 @@
   border: 0;
   font-size: 1.0em;
   display:block;
+  -webkit-overflow-scrolling: touch;
 }
 
 .highlight pre code {
@@ -25,7 +26,6 @@
   color: #333;
   display:inline;
   overflow:auto;
-  -webkit-overflow-scrolling: touch;
   white-space: pre;
   word-wrap: normal;
 }
