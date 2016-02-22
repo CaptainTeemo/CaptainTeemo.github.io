@@ -34,17 +34,6 @@
   text-align: right;
 }
 
-pre {
-	/*overflow-x: auto;
-	overflow-y: hidden;
-	width: 100%;*/
-	padding: 0.1em 0.5em 0.3em 0.7em;
-	border-left: 11px solid #ccc;
-	margin: 1.7em 0 1.7em 0.3em;
-	overflow: auto;
-	width: 500px;
-}
-
 /*.highlight  { background-color: #49483e }*/
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #272822; color: #f8f8f2 }
