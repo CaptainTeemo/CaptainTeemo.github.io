@@ -7,7 +7,7 @@ date:   2015-12-29 12:04:47 +0800
 I've been learning and playing Swift for six months or more, now that Swift has been [open source](https://swift.org/), it's time to review what I missed with **Swift Programming: The Big Nerd Ranch Guide**.
 
 
-###Overflow operator
+####Overflow operator
 
 Scenario:
 
@@ -37,7 +37,7 @@ Wrap around:
 
 
 
-###The `fallthrough` keyword
+####The `fallthrough` keyword
 
 Scenario:
 
@@ -58,7 +58,7 @@ default:
 
 
 
-###The `if-case` syntax
+####The `if-case` syntax
 
 Scenario:
 
@@ -92,7 +92,7 @@ if case 18...35 = age where age >= 21 {
 
 Pretty cool right?
 
-### The `for-case` syntax
+#### The `for-case` syntax
 
 Scenario:
 
