@@ -5,7 +5,10 @@ body {
 
 /*Blog entries*/
 div.blog-entries p img {
-  /*max-width: 750px;*/
+  max-width: 750px;
+}
+
+img {
   width: 100%;
 }
 
