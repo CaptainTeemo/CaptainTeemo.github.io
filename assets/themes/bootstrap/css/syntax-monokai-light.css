@@ -8,6 +8,7 @@
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
+  overflow:auto;
 }
 
 .highlight pre {
@@ -18,7 +19,6 @@
   background-color: transparent;
   border: 0;
   font-size: 1.0em;
-  overflow:auto;
   word-wrap: normal;
 }
 
