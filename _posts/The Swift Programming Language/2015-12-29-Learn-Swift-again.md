@@ -4,7 +4,7 @@ title:  "Learn Swift again"
 date:   2015-12-29 12:04:47 +0800
 ---
 
-I've been learning and playing Swift for six months or more, now that Swift has been [open source](https://swift.org/), it's time to review what I missed with **Swift Programming: The Big Nerd Ranch Guide**.
+I've been learning and playing Swift for a while, now that Swift has been [open source](https://swift.org/), it's time to review what I missed with **Swift Programming: The Big Nerd Ranch Guide**.
 
 
 ####Overflow operator
