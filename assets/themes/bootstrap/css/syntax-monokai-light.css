@@ -8,8 +8,6 @@
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
-  display: inline-block;
-  /*overflow: auto;*/
 }
 
 .highlight pre {
@@ -22,13 +20,12 @@
   font-size: 1.0em;
   word-break: normal;
   word-wrap: normal;
-  /*overflow: auto;*/
+  overflow: auto;
 }
 
 .highlight pre code {
   font-size: inherit;
   color: #333;
-  overflow: auto;
 }
 
 .highlight pre .lineno {
