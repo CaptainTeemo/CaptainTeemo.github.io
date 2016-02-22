@@ -121,7 +121,7 @@ func makeGrowthTracker(growth: Int) -> () -> Int {
 }
 
 var counter = 0
-let growBy500 = makeGrowthTracker(growth: 500)
+let growBy500 = makeGrowthTracker(500)
 growBy500()
 growBy500()
 counter += growBy500()
