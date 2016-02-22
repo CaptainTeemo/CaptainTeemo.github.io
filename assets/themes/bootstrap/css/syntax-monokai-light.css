@@ -8,9 +8,6 @@
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
   border-radius: 4px;
-  overflow:auto;
-  white-space: nowrap;
-  word-wrap: normal;
 }
 
 .highlight pre {
@@ -21,6 +18,9 @@
   border: 0;
   font-size: 1.0em;
   display:inline;
+  overflow:auto;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 
 .highlight pre code {
