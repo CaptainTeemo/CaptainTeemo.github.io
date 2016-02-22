@@ -31,6 +31,11 @@
   text-align: right;
 }
 
+pre {
+	overflow: auto;
+	width: 500px;
+}
+
 /*.highlight  { background-color: #49483e }*/
 .highlight .hll { background-color: #49483e }
 .highlight  { background: #272822; color: #f8f8f2 }
