@@ -36,8 +36,9 @@
 
 pre {
     padding: 8px 12px;
-    overflow-x: auto;
+    overflow: auto;
     word-break: normal;
+    word-wrap: normal;
 }
 
 /*.highlight  { background-color: #49483e }*/
