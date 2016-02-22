@@ -20,13 +20,13 @@
   background-color: transparent;
   border: 0;
   font-size: 1.0em;
-  display:inline-block;
+  display:inline;
 }
 
 .highlight pre code {
   font-size: inherit;
   color: #333;
-  display:inline-block;
+  display:inline;
 }
 
 .highlight pre .lineno {
