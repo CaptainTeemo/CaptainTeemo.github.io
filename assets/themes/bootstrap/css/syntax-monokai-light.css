@@ -19,7 +19,8 @@
   background-color: transparent;
   border: 0;
   font-size: 1.0em;
-  overflow: auto;
+  overflow-x: scroll;
+  overflow-y: auto;
   word-break: normal;
   word-wrap: normal;
 }
