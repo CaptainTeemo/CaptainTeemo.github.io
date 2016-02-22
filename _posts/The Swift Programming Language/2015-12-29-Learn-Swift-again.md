@@ -106,4 +106,31 @@ for case let i in 1...100 where i % 3 == 0 {
 
 So for the code above, the `for` loop will print integers from 1 to 100 which can be divided by 3.
 
+#### Closures Capture Values!
 
+Closures and functions can keep track of internal infomation encapsulated by a variable defined in their enclosing scope.
+
+```swift
+func makeGrowthTracker(growth: Int) -> () -> Int {
+    var totalGrowth = 0
+    func growthTracker() -> Int {
+        totalGrowth += growth
+        return totalGrowth
+    }
+    return growthTracker
+}
+
+var counter = 0
+let growBy500 = makeGrowthTracker(growth: 500)
+growBy500()
+growBy500()
+counter += growBy500()
+```
+
+Well, the value of counter is 1500. It turns out the closure is keeping an internal running total of growth.
+
+#### Closures Are Reference Types!
+
+```swift
+
+```
