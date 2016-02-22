@@ -9,6 +9,8 @@
   border: 1px solid #e1e1e8;
   border-radius: 4px;
   display: inline-block;
+  overflow-x: scroll;
+  overflow-y: auto;
 }
 
 .highlight pre {
@@ -19,8 +21,6 @@
   background-color: transparent;
   border: 0;
   font-size: 1.0em;
-  overflow-x: scroll;
-  overflow-y: auto;
   word-break: normal;
   word-wrap: normal;
 }
