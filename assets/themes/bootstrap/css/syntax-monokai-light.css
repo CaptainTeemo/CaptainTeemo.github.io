@@ -20,6 +20,7 @@
   font-size: 1.0em;
   overflow-x: auto;
   overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
   word-wrap: normal;
 }
 
