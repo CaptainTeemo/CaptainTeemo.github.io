@@ -18,15 +18,15 @@
   border: 0;
   font-size: 1.0em;
   display:inline;
-  overflow:auto;
-  white-space: nowrap;
-  word-wrap: normal;
 }
 
 .highlight pre code {
   font-size: inherit;
   color: #333;
   display:inline;
+  overflow:auto;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 
 .highlight pre .lineno {
