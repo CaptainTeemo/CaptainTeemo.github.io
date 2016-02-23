@@ -1,5 +1,6 @@
 ---
 layout: post
+category : Learning from books
 title:  "Warming up - a three line code quick sort using Swift"
 ---
 
