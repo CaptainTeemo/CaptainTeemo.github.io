@@ -132,5 +132,13 @@ Well, the value of counter is 1500. It turns out the closure is keeping an inter
 #### Closures Are Reference Types!
 
 ```swift
-
+let growBy500Ref = growBy500
+counter = growBy500Ref()
 ```
+
+And then value of counter should be 2000.
+
+
+#### Functional Programming
+
+
