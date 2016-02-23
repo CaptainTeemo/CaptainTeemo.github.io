@@ -145,13 +145,13 @@ The following theoretical stuff was totally copying from book.
 
 >Swift adopts some patterns from the *functional programming* paradigm. It is difficult to provide a concrete definition of functional programming because people use the phrase with different meanings and intentions, but typically it is understood to include:
 
-> - *First-class functions* – functions can be passed as arguments to other functions, can be stored in variables, etc.; they are just like any other type.
+>- *First-class functions* – functions can be passed as arguments to other functions, can be stored in variables, etc.; they are just like any other type.
 
-> - *Pure functions* – functions have no side effects; functions, given the same input, always return the same output, and do not modify other states elsewhere in the program. Most math functions like sin, cos, fibonacci, and factorial are pure.
+>- *Pure functions* – functions have no side effects; functions, given the same input, always return the same output, and do not modify other states elsewhere in the program. Most math functions like sin, cos, fibonacci, and factorial are pure.
 
-> - *Immutability* – mutability is de-emphasized as it is more difficult to reason about data whose values can change.
+>- *Immutability* – mutability is de-emphasized as it is more difficult to reason about data whose values can change.
 
-> - *Strong typing* – a strong type system increases the runtime safety of the code because the guarantees of the language’s type system are checked at compile time.
+>- *Strong typing* – a strong type system increases the runtime safety of the code because the guarantees of the language’s type system are checked at compile time.
 
 >Swift supports all of these approaches.
 
