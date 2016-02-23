@@ -28,7 +28,7 @@ Wrap around:
 >Swift provides *overflow operators* that have different behavior when the value is too big or too small.
 
 | Operators | Description |
-| --------- | ----------- |
+| :---------: | :-----------: |
 | &+ | overflow addition operator |
 | &- | underflow subtraction operator |
 | &* | overflow multiplication operator |
@@ -132,5 +132,13 @@ Well, the value of counter is 1500. It turns out the closure is keeping an inter
 #### Closures Are Reference Types!
 
 ```swift
-
+let growBy500Ref = growBy500
+counter = growBy500Ref()
 ```
+
+And then value of counter should be 2000.
+
+
+#### Functional Programming
+
+
