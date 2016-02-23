@@ -28,7 +28,7 @@ Wrap around:
 >Swift provides *overflow operators* that have different behavior when the value is too big or too small.
 
 | Operators | Description |
-| --------- |: ----------- :|
+| --------- | ----------- |
 | &+ | overflow addition operator |
 | &- | underflow subtraction operator |
 | &* | overflow multiplication operator |
