@@ -141,4 +141,20 @@ And then value of counter should be 2000.
 
 #### Functional Programming
 
+The following theoretical stuff was totally copying from book.
 
+>Swift adopts some patterns from the *functional programming* paradigm. It is difficult to provide a concrete definition of functional programming because people use the phrase with different meanings and intentions, but typically it is understood to include:
+
+>+ *First-class functions* – functions can be passed as arguments to other functions, can be stored in variables, etc.; they are just like any other type.
+
+>+ *Pure functions* – functions have no side effects; functions, given the same input, always return the same output, and do not modify other states elsewhere in the program. Most math functions like sin, cos, fibonacci, and factorial are pure.
+
+>+ *Immutability* – mutability is de-emphasized as it is more difficult to reason about data whose values can change.
+
+>+ *Strong typing* – a strong type system increases the runtime safety of the code because the guarantees of the language’s type system are checked at compile time.
+
+>Swift supports all of these approaches.
+
+>Functional programming can make your code more concise and expressive. By emphasizing immutability and strong compile time type checking, your code can also be safer at runtime. These hallmarks of functional programming can also make code easier to reason about and maintain.
+
+>Swift’s `let` keyword allows you to declare immutable instances in your code. Its strong type system helps you to catch errors at compile time instead of at runtime. Swift also provides several *higher-order functions* that are well known to developers fond of functional programming: **map(_:)**, **filter(_:)**, and **reduce(_:combine:)**. These functions emphasize that Swift’s functions are indeed first-class citizens.
