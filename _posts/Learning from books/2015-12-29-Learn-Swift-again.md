@@ -197,3 +197,7 @@ for element in array {
 }
 print(sum)
 ```
+
+#### Methods in Enum
+
+A method is a function that is associated with a type. In some languages, methods can only be associated with classes. In Swift, methods can also be associated with enums.
