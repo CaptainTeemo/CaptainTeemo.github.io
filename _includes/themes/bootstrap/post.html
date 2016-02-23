@@ -21,6 +21,17 @@
       </ul>
     {% endunless %}
 
+    {% unless page.tags == empty %}
+    <h4>Tags</h4>
+      <ul class="nav nav-pills">
+	      <!-- <li><i class="icon-tags"></i></li> -->
+        {% assign tags_list = page.tags %}
+        {% include JB/tags_list %}
+      </ul>
+    {% endunless %}
+
+    <hr>
+
     <div id="disqus_thread"></div>
     <script>
         /**
@@ -43,18 +54,6 @@
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-    {% unless page.tags == empty %}
-    <h4>Tags</h4>
-      <ul class="nav nav-pills">
-	      <!-- <li><i class="icon-tags"></i></li> -->
-        {% assign tags_list = page.tags %}
-        {% include JB/tags_list %}
-      </ul>
-    {% endunless %}
-
-    <hr>
     
     <ul class="pagination">
       {% if page.previous %}
