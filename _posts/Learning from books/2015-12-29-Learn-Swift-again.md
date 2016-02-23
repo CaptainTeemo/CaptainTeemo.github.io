@@ -161,3 +161,38 @@ The following theoretical stuff was just copied from book.
 >Functional programming can make your code more concise and expressive. By emphasizing immutability and strong compile time type checking, your code can also be safer at runtime. These hallmarks of functional programming can also make code easier to reason about and maintain.
 
 >Swift’s `let` keyword allows you to declare immutable instances in your code. Its strong type system helps you to catch errors at compile time instead of at runtime. Swift also provides several *higher-order functions* that are well known to developers fond of functional programming: **map(_:)**, **filter(_:)**, and **reduce(_:combine:)**. These functions emphasize that Swift’s functions are indeed first-class citizens.
+
+
+#### Higher-order functions
+
+##### map(_:)
+
+```swift
+let array = [1, 2, 3, 4, 5]
+print(array.map { "\($0)"})
+// prints ["1", "2", "3", "4", "5"]
+```
+
+##### filter(_:)
+
+```swift
+let array = [1, 2, 3, 4, 5]
+print(array.filter { return $0 > 3 })
+// prints [4, 5]
+```
+
+##### reduce(_:combine:)
+
+Reduce the values in the collection to a single value that is returned from the function.
+
+```swift
+let array = [1, 2, 3, 4, 5]
+print(array.reduce(0, combine: +))
+// here we caculate the sum of array's each value
+// it's equivalent to the following:
+var sum = 0
+for element in array {
+    sum += element
+}
+print(sum)
+```
