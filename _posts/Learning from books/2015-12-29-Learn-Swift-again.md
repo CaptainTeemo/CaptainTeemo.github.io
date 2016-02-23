@@ -72,7 +72,7 @@ default:
 }
 ```
 
-That's pretty well, but we can do better!
+Looks good, but we can do better!
 
 ```swift
 if case 18...35 = age {
