@@ -31,7 +31,7 @@ Wrap around:
 | --------- | ----------- |
 | &+ | overflow addition operator |
 | &- | underflow subtraction operator |
-| &* | overflow multiplication operator | 
+| &* | overflow multiplication operator |
 
 >Since y is an **Int8**, once you get to 127 you cannot go any higher. Instead, incrementing one more time wraps around to -128. So 120 + 8 = -128, 120 + 9 = -127, and 120 + 10 = -126.
 
