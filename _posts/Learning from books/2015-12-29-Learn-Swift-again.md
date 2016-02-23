@@ -92,6 +92,7 @@ if case 18...35 = age where age >= 21 {
 
 Pretty cool right?
 
+
 #### The `for-case` syntax
 
 Scenario:
@@ -105,6 +106,7 @@ for case let i in 1...100 where i % 3 == 0 {
 >Here we are using a `case` allows for finer control over when the loop execute its code. Use a `case` with a `where` clause to provide a logical test that must be met in order to execute the loop's code. If the condition rstablished by the `where` clause is not met, then the loop's code is not run.
 
 So for the code above, the `for` loop will print integers from 1 to 100 which can be divided by 3.
+
 
 #### Closures Capture Values!
 
@@ -128,6 +130,7 @@ counter += growBy500()
 ```
 
 Well, the value of counter is 1500. It turns out the closure is keeping an internal running total of growth.
+
 
 #### Closures Are Reference Types!
 
