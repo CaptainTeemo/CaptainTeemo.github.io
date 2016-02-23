@@ -173,7 +173,7 @@ print(array.map { "\($0)"})
 // prints ["1", "2", "3", "4", "5"]
 ```
 
-##### flapMap(_:)
+##### flatMap(_:)
 
 ```swift
 let nestedArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
