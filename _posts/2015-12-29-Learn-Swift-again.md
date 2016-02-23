@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Learn Swift again"
-date:   2015-12-29 12:04:47 +0800
+category : Learning from books
 ---
 
 I've been learning and playing Swift for a period of time, now that Swift has been [open source](https://swift.org/), it's time to review what I missed with **Swift Programming: The Big Nerd Ranch Guide**.

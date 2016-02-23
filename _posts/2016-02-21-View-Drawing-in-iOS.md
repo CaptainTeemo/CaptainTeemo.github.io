@@ -1,5 +1,6 @@
 ---
 layout: post
+category : Learning from books
 title:  "View Drawing in iOS"
 ---
 
