@@ -141,7 +141,7 @@ And then value of counter should be 2000.
 
 #### Functional Programming
 
-The following theriotic stuff is totally copied from book.
+The following theoretical stuff was totally copying from book.
 
 >Swift adopts some patterns from the *functional programming* paradigm. It is difficult to provide a concrete definition of functional programming because people use the phrase with different meanings and intentions, but typically it is understood to include:
 - *First-class functions* – functions can be passed as arguments to other functions, can be stored in variables, etc.; they are just like any other type.
