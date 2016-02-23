@@ -14,17 +14,20 @@
   padding: 0;
   margin-top: 0;
   margin-bottom: 0;
-  white-space: pre;
   background-color: transparent;
   border: 0;
   font-size: 1.0em;
-  overflow: auto;
-  word-wrap: normal;
+  display:block;
+  -webkit-overflow-scrolling: touch;
 }
 
 .highlight pre code {
   font-size: inherit;
   color: #333;
+  display:inline;
+  overflow:auto;
+  white-space: pre;
+  word-wrap: normal;
 }
 
 .highlight pre .lineno {

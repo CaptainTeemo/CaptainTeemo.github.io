@@ -4,10 +4,10 @@ title:  "Learn Swift again"
 date:   2015-12-29 12:04:47 +0800
 ---
 
-I've been learning and playing Swift for six months or more, now that Swift has been [open source](https://swift.org/), it's time to review what I missed with **Swift Programming: The Big Nerd Ranch Guide**.
+I've been learning and playing Swift for a period of time, now that Swift has been [open source](https://swift.org/), it's time to review what I missed with **Swift Programming: The Big Nerd Ranch Guide**.
 
 
-###Overflow operator
+####Overflow operator
 
 Scenario:
 
@@ -37,7 +37,7 @@ Wrap around:
 
 
 
-###The `fallthrough` keyword
+####The `fallthrough` keyword
 
 Scenario:
 
@@ -58,7 +58,7 @@ default:
 
 
 
-###The `if-case` syntax
+####The `if-case` syntax
 
 Scenario:
 
@@ -92,7 +92,7 @@ if case 18...35 = age where age >= 21 {
 
 Pretty cool right?
 
-### The `for-case` syntax
+#### The `for-case` syntax
 
 Scenario:
 
@@ -106,4 +106,31 @@ for case let i in 1...100 where i % 3 == 0 {
 
 So for the code above, the `for` loop will print integers from 1 to 100 which can be divided by 3.
 
+#### Closures Capture Values!
 
+Closures and functions can keep track of internal infomation encapsulated by a variable defined in their enclosing scope.
+
+```swift
+func makeGrowthTracker(growth: Int) -> () -> Int {
+    var totalGrowth = 0
+    func growthTracker() -> Int {
+        totalGrowth += growth
+        return totalGrowth
+    }
+    return growthTracker
+}
+
+var counter = 0
+let growBy500 = makeGrowthTracker(500)
+growBy500()
+growBy500()
+counter += growBy500()
+```
+
+Well, the value of counter is 1500. It turns out the closure is keeping an internal running total of growth.
+
+#### Closures Are Reference Types!
+
+```swift
+
+```
