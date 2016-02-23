@@ -179,7 +179,7 @@ print(array.map { "\($0)"})
 let nestedArray = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(nestedArray.flatMap { $0.map { "\($0)" } })
 // note that the first $0 here refers to an element of nested array which is an array.
-// so it will prints ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+// so it prints ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
 ```
 
 ##### filter(_:)
