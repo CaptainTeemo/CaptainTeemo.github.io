@@ -189,6 +189,7 @@ Reduce the values in the collection to a single value that is returned from the 
 let array = [1, 2, 3, 4, 5]
 print(array.reduce(0, combine: +))
 // here we caculate the sum of array's each value
+// so console shows 15
 // it's equivalent to the following:
 var sum = 0
 for element in array {
