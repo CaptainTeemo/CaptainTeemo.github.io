@@ -300,7 +300,7 @@ indirect enum BinaryTree<T> {
 }
 ```
 
-or if not all cases are recursive, we just need to put `indirect` before `case`.
+or if only some specific cases need to be recursive, we should put `indirect` before each `case`.
 
 ```swift
 enum BinaryTree<T> {
