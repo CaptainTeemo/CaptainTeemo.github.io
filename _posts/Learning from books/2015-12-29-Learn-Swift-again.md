@@ -267,7 +267,28 @@ square.area() // 100
 let rect = ShapeDimensions.Rectangle(width: 5.0, height: 10.0)
 rect.area() // 50
 
+let point = ShapeDimensions.Point
+point.area() // 0
+
 ```
 
 ##### Recursive Enumerations
+
+Thinking of a binary tree, made by Enum:
+
+```swift
+enum BinaryTree<T> {
+    case Node(left: BinaryTree?, right: BinaryTree?, value: T)
+}
+```
+
+If we type the code above in Xcode, the compiler will complain about that our BinaryTree is not marked "indirect".
+
+What's the problem?
+
+> The compiler knows that any instance of an enum will only ever be in one case at a time, although it may change cases as your program runs. Therefore, when the compiler is deciding how much memory an instance of enum requires, it will look at each case and figure out which case requires the most memory. The enum will require that much memory (plus a little bit more that the compiler will use to keep track of which case is currently assigned).
+
+Now let's look back at our **ShapeDimensions** enum. The `.Point` case has no associated data, so it requires no extra memory. The `.Square` case has an associated **Double**, so it requires one **Double**'s worth of memory(8 bytes). The `.Rectangle` case has two associated **Double**s, so it requires 16 bytes of memory. The actual size of an instance of **ShapeDimensions** is 17 bytes: enough room to store **.Rectangle**, if necessary, plus one more byte to keep track of which case the instance actually is.
+
+Considering our **BinaryTree** enum, How much memory is required for the `.Node` case? The answer is we don't know, and the compiler doesn't know either. So **BinaryTree** would require an infinite amount of memory!
 
