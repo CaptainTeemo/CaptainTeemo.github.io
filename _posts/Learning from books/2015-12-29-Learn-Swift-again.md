@@ -292,3 +292,40 @@ Now let's look back at our **ShapeDimensions** enum. The `.Point` case has no as
 
 Considering our **BinaryTree** enum, How much memory is required for the `.Node` case? The answer is we don't know, and the compiler doesn't know either. So **BinaryTree** would require an infinite amount of memory!
 
+Swift knows the problem. Instead of deciding how much memory `.Node` will require(which would lead back into infinite recursion), we use the key word `indirect` to instruct the compiler to instead store the enum's data behind a pointer.
+
+```swift
+indirect enum BinaryTree<T> {
+    case Node(left: BinaryTree?, right: BinaryTree?, value: T)
+}
+```
+
+or if not all cases are recursive, we just need to put `indirect` before `case`.
+
+```swift
+enum BinaryTree<T> {
+    indirect case Node(left: BinaryTree?, right: BinaryTree?, value: T)
+}
+```
+
+Then we are making a binary tree with joy:
+
+```swift
+let tree = BinaryTree.Node(
+    left: .Node(
+        left: .Node(
+            left: nil,
+            right: nil,
+            value: 3
+        ),
+        right: nil,
+        value: 1
+    ),
+    right: .Node(
+        left: nil,
+        right: nil,
+        value: 2
+    ),
+    value: 0
+)
+```
