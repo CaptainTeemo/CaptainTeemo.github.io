@@ -330,5 +330,6 @@ let tree = BinaryTree.Node(
 )
 ```
 
-If we draw the above with circle, it looks like 
+If we sketch it out, it looks like
+
 ![alt tag](https://raw.github.com/CaptainTeemo/CaptainTeemo.github.io/master/assets/images/enum_binaryTree.png)
