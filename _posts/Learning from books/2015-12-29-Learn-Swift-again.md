@@ -19,7 +19,7 @@ let z = y + 10
 
 There is no surprise that compiler will throw an error.
 
-`Computer stores like 0 0 0 0 0 0 0 0 for 8 bit integers, which means range of Int8 should be [-128, 127]. `
+`Computer stores 8 bit integers as 0 0 0 0 0 0 0 0, which means range of Int8 should be [-128, 127]. `
 
 
 
