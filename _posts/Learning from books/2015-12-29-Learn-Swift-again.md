@@ -207,6 +207,67 @@ for element in array {
 print(sum)
 ```
 
-#### Methods in Enum
+#### The Mystery of Enum
+
+##### Methods in Enum
 
 A method is a function that is associated with a type. In some languages, methods can only be associated with classes. In Swift, methods can also be associated with enums.
+
+Imagine there is a lightbulb which has states *on* and *off*
+
+```swift
+enum Lightbulb {
+    case On
+    case Off
+    
+    // since enum is value type, we should mark this function mutating
+    mutating func toggle() {
+        switch self {
+        case .On:
+            self = .Off
+        case .Off:
+            self = .On
+        }
+    }
+}
+// the lightbulb is off in initial state.
+var bulb = Lightbulb.Off
+// and we are going to turn it on
+bulb.toggle()
+// lights!
+```
+
+##### Associated Values
+
+Swift offers a powerful flavor of enumeration: cases with associated values. Associated values allow you to attach data to instances of an enumeration, and ddifferent cases can have different types of associated values.
+
+```swift
+enum ShapeDimensions {
+    case Point
+    case Square(Double)
+    case Rectangle(width: Double, height: Double)
+    
+    func area() -> Double {
+        switch self {
+        case .Point:
+            return 0
+            
+        case let .Square(side):
+            return side * side
+            
+        case let .Rectangle(width, height):
+            return width * height
+        }
+    }
+}
+
+let square = ShapeDimensions.Square(10.0)
+square.area() // 100
+
+let rect = ShapeDimensions.Rectangle(width: 5.0, height: 10.0)
+rect.area() // 50
+
+```
+
+##### Recursive Enumerations
+
