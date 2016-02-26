@@ -426,3 +426,7 @@ watch.type = .Hermès
 print(watch.startPrice)
 // prints 9888
 ```
+
+#### Value and Reference Types
+
+Value types that are declared as constants cannot have their properties changed, even if these properties are declared with `var` in the type’s implementation. You can think of the instances of a value type as representing a single whole value, like an integer. If you declare an integer as a constant, then you cannot change some part of it later on.
