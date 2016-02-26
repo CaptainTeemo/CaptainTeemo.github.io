@@ -392,3 +392,37 @@ If you type the code above in Playground, you'll find that `changer` is `inout P
 Obviously, `changer` is a curried function. But what about that `inout`?
 Well, **The Big Nerd Ranch** told us:
 >A `mutating` function is simply a *curried function* whose first argument is `self`, passed in as an `inout` parameter. Because value types are copied when they are passed, for nonmutating methods `self` is actually a copy of the value. In order to make changes, `self` needs to be declared as `inout`, and `mutating` is the way Swift allows you to accomplish that.
+
+
+#### Lazy Stored Properties
+
+```swift
+struct AppleWatch {
+    enum Type {
+        case Sport
+        case Normal
+        case Hermès
+        case Edition
+    }
+    
+    var type = Type.Edition
+    
+    lazy var startPrice: Int = {
+        switch self.type {
+        case .Sport:
+            return 2588
+        case .Normal:
+            return 4188
+        case .Hermès:
+            return 9888
+        case .Edition:
+            return 74800
+        }
+    }()
+}
+
+var watch = AppleWatch()
+watch.type = .Hermès
+print(watch.startPrice)
+// prints 9888
+```
