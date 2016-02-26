@@ -8,9 +8,9 @@ div.blog-entries p img {
   max-width: 750px;
 }
 
-/*img {*/
-/*  width: 100%;*/
-/*}*/
+img {
+  max-width: 100%;
+}
 
 /* Custom container */
 .container-narrow {
