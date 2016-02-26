@@ -333,3 +333,8 @@ let tree = BinaryTree.Node(
 If we sketch it out, it looks like
 
 ![alt tag](https://raw.github.com/CaptainTeemo/CaptainTeemo.github.io/master/assets/images/enum_binaryTree.png)
+
+
+#### Function Currying
+
+
