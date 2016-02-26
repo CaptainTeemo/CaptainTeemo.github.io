@@ -391,4 +391,4 @@ let changer = Person.changeName
 If you type the code above in Playground, you'll find that `changer` is `inout Person -> (String, String) -> ()`.
 Obviously, `changer` is a curried function. But what about that `inout`?
 Well, **The Big Nerd Ranch** told us:
->A `mutating` function is simply a *curried function* whose first argument is `self`, passed in as an `inout` parameter. Because value types are copied when they are passed, for nonmutating methods self is actually a copy of the value. In order to make changes, self needs to be declared as `inout`, and `mutating` is the way Swift allows you to accomplish that.
+>A `mutating` function is simply a *curried function* whose first argument is `self`, passed in as an `inout` parameter. Because value types are copied when they are passed, for nonmutating methods `self` is actually a copy of the value. In order to make changes, `self` needs to be declared as `inout`, and `mutating` is the way Swift allows you to accomplish that.
