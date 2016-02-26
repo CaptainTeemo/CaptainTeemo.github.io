@@ -337,4 +337,58 @@ If we sketch it out, it looks like
 
 #### Function Currying
 
+>Function currying allows you to rewrite an existing function that takes multiple parameters as a new function that takes one parameter and returns another function. The function you return takes the original function’s remaining parameters and returns what the original function returns. This process of nesting functions, each with the remaining number of parameters, continues until there are no remaining parameters.
 
+>The rewritten function is called a curried function. A curried function partially applies an existing function. That is, a curried function allows you to bind values to a function’s arguments before you call it. This feature of curried functions is similar to supplying default values to a function’s parameters, but is far more dynamic.
+
+Let's start with a `Hello World`.
+
+```swift
+func greeting(greeting: String, name: String) -> String {
+    return "\(greeting) \(name)"
+}
+```
+This is the normal way. Now we are currying it.
+
+```swift
+func greeting(greeting: String) (name: String) -> String {
+    return "\(greeting) \(name)"
+}
+```
+
+So we could use the function like this:
+
+```swift
+let greetingFunction = greeting("Hello")
+print(greetingFunction(name: "World"))
+// prints "Hello World"
+
+// or more concise
+print(greeting("Hello")(name: "World"))
+// also prints "Hello World"
+```
+
+It's time to look at `mutating` function.
+
+```swift
+struct Person {
+    var firstName = "Captain"
+    var lastName = "Teemo"
+    
+    mutating func changeName(firstName: String, lastName: String) {
+        self.firstName = firstName
+        self.lastName = lastName
+    }
+}
+```
+
+Looks pretty normal, let's move on.
+
+```swift
+let changer = Person.changeName
+```
+
+If you type the code above in Playground, you'll find that `changer` is `inout Person -> (String, String) -> ()`.
+Obviously, `changer` is a curried function. But what about that `inout`?
+Well, **The Big Nerd Ranch** told us:
+>A `mutating` function is simply a *curried function* whose first argument is `self`, passed in as an `inout` parameter. Because value types are copied when they are passed, for nonmutating methods self is actually a copy of the value. In order to make changes, self needs to be declared as `inout`, and `mutating` is the way Swift allows you to accomplish that.
