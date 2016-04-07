@@ -1,7 +1,7 @@
 ---
 layout: post
 category : Notes
-title:  "Warming up - a three line code quick sort using Swift"
+title:  "Warming up - a three line code quick sort in Swift"
 ---
 
 ```swift
