@@ -6,7 +6,7 @@ title:  "UIColor with Hex"
 
 Sometimes we want to create UIColor with hex, but there isn't any builtin way, so let't make our own.
 
-We hope our function to create UIColor with hex is something like `UIColor(1BB0F4FF)`, obviously it's better to add it as extension.
+We hope our function to create UIColor with hex is something like `UIColor(1BB0F4FF)`, obviously it's better to be added as extension.
 
 ```swift
 extension UIColor {
