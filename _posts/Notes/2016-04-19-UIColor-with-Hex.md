@@ -22,7 +22,7 @@ First look at the given hex `1BB0F4FF`, we consider every two elements as a comp
 
 In order to extract component from hex, we need to use bitwise shifting.
 
-`hex >> 24` means right shift by `24` positions, in binary of course, results in the hex `1B`, which is `27` in demical. Additionally we should better add a logical AND operator with `0xff` to make it less than or equal to `255`.
+`hex >> 24` means right shift by `24` positions, in binary of course, results in the hex `1B`, which is `27` in demical. Additionally we should better add a logical AND operator with `0xff` to ensure it won't be greater than `255`.
 
 Enough talking, let's showing the code.
 
