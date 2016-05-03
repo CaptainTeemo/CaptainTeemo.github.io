@@ -21,7 +21,7 @@ pre {
   -webkit-overflow-scrolling: touch;
 }
 
-code {
+pre code {
   font-size: inherit;
   color: #333;
   display:inline;
