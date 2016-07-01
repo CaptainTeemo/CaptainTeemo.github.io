@@ -24,8 +24,8 @@
 .highlight pre code {
   font-size: inherit;
   color: #333;
-  display:inline;
-  overflow:auto;
+  display: inline;
+  overflow: auto;
   white-space: pre;
   word-wrap: normal;
 }
