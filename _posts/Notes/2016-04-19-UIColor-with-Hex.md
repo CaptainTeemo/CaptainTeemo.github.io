@@ -6,12 +6,12 @@ title:  "UIColor with Hex"
 
 Sometimes we want to create UIColor with hex, but there isn't any builtin way, so let't make our own.
 
-We hope our function to create UIColor with hex is something like `UIColor(1BB0F4FF)`, obviously it's better to be added as extension.
+We hope our function to create UIColor with hex is something like `UIColor(1BB0F4FF)`, obviously it's better to be added as an extension.
 
 ```swift
 extension UIColor {
 	convenience init(hex: Int) {
-	
+
 	}
 }
 ```
@@ -32,11 +32,11 @@ convenience init(hex: Int) {
 }
 ```
 
-Oops, there's an error said `Argument labels '(_:, _:, _:, _:)' do not match any available overloads`. 
+Oops, there's an error said `Argument labels '(_:, _:, _:, _:)' do not match any available overloads`.
 
 ![](/assets/images/excuseme.jpg)
 
-But that's not a big deal, we can fix it.
+But that's not a big deal, we'll fix it.
 
 ```swift
 convenience init(_ red: Int, _ green: Int, _ blue: Int, _ alpha: Int) {
