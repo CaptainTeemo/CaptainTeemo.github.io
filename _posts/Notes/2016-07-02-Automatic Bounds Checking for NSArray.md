@@ -171,7 +171,7 @@ So the final code is
 
 Now let's run the test:
 
-```
+```objc
 1
 (null)
 ```
