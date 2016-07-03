@@ -53,7 +53,7 @@ Then here comes the choice: `extension(aka category)`.
 
 ### First Try
 
-A man created an extension which uses runtime functions to swizzle `objectAtIndex:`, and do bounds checking before return the value.
+A man created an extension which uses runtime functions to swizzle `objectAtIndex:`, and do bounds checking before returning the value.
 
 ```objc
 @interface NSArray<ObjectType> (BoundsProtection)
@@ -102,9 +102,10 @@ What the problem here is that `NSArray` is a kind of so called `Class Cluster`, 
 
 ### Try Again
 
-Since primitive class methods cannot be overrided in `NSArray`, is there any chance to override them without subclassing?
+Since primitive class methods cannot be overrode in `NSArray`, is there any chance to override one in an extension?
 
-According to [Apple's Document](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW4)
+From to [Apple's Document](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW4)
+
 >Because the methods declared in a category are added to an existing class, you need to be very careful about method names.
 
 >**If the name of a method declared in a category is the same as a method in the original class, or a method in another category on the same class (or even a superclass), the behavior is undefined as to which method implementation is used at runtime.** This is less likely to be an issue if you’re using categories with your own classes, but can cause problems when using categories to add methods to standard Cocoa or Cocoa Touch classes.
