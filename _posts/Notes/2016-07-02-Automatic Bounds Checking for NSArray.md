@@ -53,13 +53,13 @@ Then here comes the choice: `extension(aka category)`.
 
 ### First Try
 
-A man created an extension which uses runtime functions to swizzle `objectAtIndex:`, and do bounds checking before returning the value.
+A man creates an extension which uses runtime functions to swizzle `objectAtIndex:`, and do bounds checking before returning the value.
 
 ```objc
-@interface NSArray<ObjectType> (BoundsProtection)
+@interface NSArray<ObjectType> (BoundsChecking)
 @end
 
-@implementation NSArray (BoundsProtection)
+@implementation NSArray (BoundsChecking)
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -102,7 +102,7 @@ What the problem here is that `NSArray` is a kind of so called `Class Cluster`, 
 
 ### Try Again
 
-Since primitive class methods cannot be overrode in `NSArray`, is there any chance to override one in an extension?
+Since primitive class methods cannot be overridden in `NSArray`, is there any chance to override one in an extension?
 
 From to [Apple's Document](https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/CustomizingExistingClasses/CustomizingExistingClasses.html#//apple_ref/doc/uid/TP40011210-CH6-SW4)
 
@@ -120,7 +120,7 @@ After browsing the header of `NSArray` for a little while, there is a method cal
 
 Well, this is the one.
 
-Since the method `objectAtIndex:` in primitive class could not be overrided, a man has to create a another one let's call it `tryGetObjectAtIndex:` instead, and fill with the bounds checking logic.
+Since the method `objectAtIndex:` in primitive class could not be overridden, a man has to create a another one let's call it `tryGetObjectAtIndex:` instead, and fill with the bounds checking logic.
 
 ```objc
 - (id)tryGetObjectAtIndex:(NSUInteger)index {
@@ -134,11 +134,11 @@ Since the method `objectAtIndex:` in primitive class could not be overrided, a m
 So the final code is
 
 ```objc
-@interface NSArray<ObjectType> (BoundsProtection)
+@interface NSArray<ObjectType> (BoundsChecking)
 - (nullable ObjectType)tryGetObjectAtIndex:(NSUInteger)index;
 @end
 
-@implementation NSArray (BoundsProtection)
+@implementation NSArray (BoundsChecking)
 
 + (void)load {
     static dispatch_once_t onceToken;
@@ -168,7 +168,7 @@ So the final code is
 @end
 ```
 
->Note that only the literal appoaching added bounds checking, for `objectAtIndex:`, replace it with literal style or use `tryGetObjectAtIndex:`
+>Note that only the literal approaching added bounds checking, for `objectAtIndex:`, replace it with literal style or use `tryGetObjectAtIndex:`
 
 Now let's run the test:
 
@@ -177,4 +177,4 @@ Now let's run the test:
 (null)
 ```
 
-No more crashs.
+No more crashes.
