@@ -1,3 +1,9 @@
+---
+layout: post
+category : Notes
+title:  "Generic and Protocol Types Under the Hood"
+---
+
 ## Protocol Types
 
 **Polymorphism without inheritance or reference semantics**
