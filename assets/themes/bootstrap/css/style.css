@@ -1,3 +1,7 @@
+html * {
+    font-family: 'Roboto' !important;
+}
+
 /*Font size*/
 body {
   font-size: 16px;
