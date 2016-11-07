@@ -29,7 +29,10 @@ const muiTheme = getMuiTheme({
 class App extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {articles: [{"title": "test", "subtitle": "hello world"}]};
+        this.state = {articles: [
+            {"title": "test", "subtitle": "hello world"},
+            {"title": "Warming up", "subtitle": "welcome"}
+        ]};
     }
 
     fetchData() {
