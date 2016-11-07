@@ -18,7 +18,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build&&git checkout master&&git merge origin/gh-pages"
+    "deploy": "npm run build&&gh-pages -d build&&rm -rf node_modules/gh-pages/.cache&&git checkout master&&git merge origin/gh-pages"
   },
   "homepage": "https://captainteemo.github.io"
 }
