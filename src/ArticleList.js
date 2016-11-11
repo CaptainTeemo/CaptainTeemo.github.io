@@ -9,7 +9,10 @@ class ArticleList extends React.Component {
 
     render() {
         return (
-            <List>
+            <List style={{
+                width: '70%',
+                margin: '0 auto',
+            }}>
                 {this.state.articles.map((article, index) => {
                     return (
                         <ListItem

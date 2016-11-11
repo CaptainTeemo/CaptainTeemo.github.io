@@ -2,14 +2,8 @@ import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import AppBar from 'material-ui/AppBar';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import {List, ListItem} from 'material-ui/List';
-import Divider from 'material-ui/Divider';
-
-import {darkBlack} from 'material-ui/styles/colors';
 import {blue400} from 'material-ui/styles/colors';
-
-import ArticleList from './ArticleList';
-
+import Page from './Page';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
 import $ from 'jquery';
@@ -35,9 +29,9 @@ class App extends React.Component {
         ]};
     }
 
-    fetchData() {
+    componentDidMount() {
         $.ajax({
-            url: '/articles',
+            url: "/articles",
             method: 'get',
             success: (result, status, xh) => {
                 console.log(result);
@@ -48,18 +42,17 @@ class App extends React.Component {
         });
     }
 
-    componentDidMount() {
-        this.fetchData();
-    }
-
     render() {
         return (
             <MuiThemeProvider muiTheme={muiTheme}>
             <div>
                 <AppBar title="Teemo's Swift Hut" iconClassNameRight="muidocs-icon-navigation-expand-more"/>
-                <ArticleList articles={this.state.articles}>
+                {/* <ArticleList articles={this.state.articles}>
 
-                </ArticleList>
+                </ArticleList> */}
+                <Page
+                name="Automatic Bounds Checking for NSArray"
+                />
             </div>
             </MuiThemeProvider>
         );
