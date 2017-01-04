@@ -14,15 +14,15 @@ class Page extends React.Component {
     constructor(props) {
         super(props);
 
-        this.state = {name: props.name, source: ""};
+        this.state = {lastName: "", source: ""};
     }
 
     fetchData() {
         $.ajax({
-            url: '/articles/' + this.state.name + '.md',
+            url: '/articles/' + this.props.name + '.md',
             method: 'get',
             success: (result, status, xh) => {
-                this.setState({source: Marked(result)});
+                this.setState({lastName: this.props.name, source: Marked(result)});
             },
             error: (xhr, status, error) => {
                 console.log(error);
@@ -30,18 +30,18 @@ class Page extends React.Component {
         });
     }
 
-    componentDidMount() {
-        this.fetchData();
-    }
-
     render() {
+        if (this.state.lastName !== this.props.name) {
+            this.fetchData();
+        }
         return(
             <article
             className="markdown-body"
             dangerouslySetInnerHTML={{__html: this.state.source}}
             style={{
-                width: '70%',
-                margin: '20px auto 20px auto'
+                width: '100%',
+                maxWidth: '1200px',
+                margin: '20px auto'
             }}>
             </article>
         );

@@ -1,5 +1,6 @@
 import React from 'react';
-import {List, ListItem} from 'material-ui/List';
+import {Card, CardTitle, CardActions} from 'material-ui/Card';
+import FlatButton from 'material-ui/FlatButton';
 
 class ArticleList extends React.Component {
     constructor(props) {
@@ -15,12 +16,16 @@ class ArticleList extends React.Component {
             }}>
                 {this.state.articles.map((article, index) => {
                     return (
-                        <ListItem
-                        key={index}
-                        primaryText={article["title"]}
-                        secondaryText={article["subtitle"]}
-                        >
-                        </ListItem>
+                        <Card key={index}>
+                            <CardTitle
+                                title={article["title"]}
+                                subtitle={article["subtitle"]}
+                            >
+                            </CardTitle>
+                            <CardActions>
+                                <FlatButton label="View Details" />
+                            </CardActions>
+                        </Card>
                     );
                 })}
             </List>
