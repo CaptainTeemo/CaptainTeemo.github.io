@@ -5,7 +5,6 @@ import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import {blue400} from 'material-ui/styles/colors';
 import Page from './Page';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
 import {List, ListItem} from 'material-ui/List';
 import injectTapEventPlugin from 'react-tap-event-plugin';
 
@@ -26,10 +25,12 @@ const muiTheme = getMuiTheme({
 class App extends React.Component {
     constructor(props) {
         super(props);
+        
         this.state = {
             articles: [
                 "Welcome",
-                "Automatic Bounds Checking for NSArray"
+                "Automatic Bounds Checking for NSArray",
+                "UIColor with Hex"
             ],
             drawerOpen: false,
             currentName: "Welcome"
@@ -37,7 +38,16 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-
+        // $.ajax({
+        //     url: '/articles',
+        //     method: 'get',
+        //     success: (result, status, xh) => {
+        //         console.log(result);
+        //     },
+        //     error: (xhr, status, error) => {
+        //         console.log(error);
+        //     }
+        // })
     }
 
     handleToggle() {
