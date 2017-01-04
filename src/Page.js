@@ -40,8 +40,8 @@ class Page extends React.Component {
                 <div>
                     <RefreshIndicator
                         size={50}
-                        left={window.innerWidth / 2}
-                        top={window.innerHeight / 2}
+                        left={window.innerWidth / 2 - 25}
+                        top={window.innerHeight / 2 - 25}
                         loadingColor={blue400}
                         status="loading"
                         style={{
