@@ -7,6 +7,7 @@
     "react-scripts": "0.6.1"
   },
   "dependencies": {
+    "gh-pages": "^0.11.0",
     "highlight.js": "^9.8.0",
     "jquery": "^3.1.1",
     "marked": "^0.3.6",
