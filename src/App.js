@@ -25,7 +25,7 @@ const muiTheme = getMuiTheme({
 class App extends React.Component {
     constructor(props) {
         super(props);
-        
+
         this.state = {
             articles: [
                 "Welcome",
@@ -38,16 +38,16 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        // $.ajax({
-        //     url: '/articles',
-        //     method: 'get',
-        //     success: (result, status, xh) => {
-        //         console.log(result);
-        //     },
-        //     error: (xhr, status, error) => {
-        //         console.log(error);
-        //     }
-        // })
+        $.ajax({
+            url: '/articles',
+            method: 'get',
+            success: (result, status, xh) => {
+                console.log(result);
+            },
+            error: (xhr, status, error) => {
+                console.log(error);
+            }
+        })
     }
 
     handleToggle() {
