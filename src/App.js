@@ -27,11 +27,7 @@ class App extends React.Component {
         super(props);
 
         this.state = {
-            articles: [
-                "Welcome",
-                "Automatic Bounds Checking for NSArray",
-                "UIColor with Hex"
-            ],
+            articles: [],
             drawerOpen: false,
             currentName: "Welcome"
         };
@@ -39,15 +35,16 @@ class App extends React.Component {
 
     componentDidMount() {
         $.ajax({
-            url: '/articles',
+            url: '/articles.json',
             method: 'get',
-            success: (result, status, xh) => {
-                console.log(result);
+            success: (result, status, xhr) => {
+                let articles = JSON.stringify(result);
+                this.setState({articles: JSON.parse(articles)});
             },
-            error: (xhr, status, error) => {
+            error: (xhr, status, error) =>  {
                 console.log(error);
             }
-        })
+        });
     }
 
     handleToggle() {
@@ -67,6 +64,7 @@ class App extends React.Component {
                 <AppBar
                     title="Teemo's Swift Hut"
                     onLeftIconButtonTouchTap={this.handleToggle.bind(this)}
+                    style={{position: 'fixed', top: '0px'}}
                 />
                 <Drawer
                     docked={false}
@@ -84,7 +82,7 @@ class App extends React.Component {
                     })}
                 </List>
                 </Drawer>
-                <div style={{padding: '0 20px'}}>
+                <div style={{padding: '0 20px', marginTop: '84px'}}>
                     <Page name={this.state.currentName} />
                 </div>
             </div>

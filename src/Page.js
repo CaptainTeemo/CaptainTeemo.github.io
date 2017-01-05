@@ -23,7 +23,7 @@ class Page extends React.Component {
         $.ajax({
             url: '/articles/' + this.props.name + '.md',
             method: 'get',
-            success: (result, status, xh) => {
+            success: (result, status, xhr) => {
                 this.setState({lastName: this.props.name, source: Marked(result)});
             },
             error: (xhr, status, error) => {

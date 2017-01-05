@@ -21,11 +21,11 @@
     "showdown-prettify": "^1.3.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node articles_generator.js&&react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "npm run build&&gh-pages -d build -b master"
+    "deploy": "node articles_generator.js&&npm run build"
   },
   "homepage": "https://captainteemo.github.io"
 }
