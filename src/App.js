@@ -75,9 +75,11 @@ class App extends React.Component {
                 <List>
                     {this.state.articles.map((article, index) => {
                         return (
-                            <ListItem key={index} onClick={this.handleClose.bind(this, index)}>
-                                {article}
-                            </ListItem>
+                            <a key={index} href={'#' + article}>
+                                <ListItem onClick={this.handleClose.bind(this, index)}>
+                                    {article}
+                                </ListItem>
+                            </a>
                         );
                     })}
                 </List>
